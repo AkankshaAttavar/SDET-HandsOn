@@ -8,7 +8,7 @@ import java.time.Duration;
 
 public class InvalidLoginTest {
 
-    public static void main (String[] args) throws InterruptedException {
+    public static void main(String[] args) throws InterruptedException {
         WebDriverManager.chromedriver().setup();
         WebDriver driver = new ChromeDriver();
         driver.manage().window().maximize();
@@ -34,11 +34,11 @@ public class InvalidLoginTest {
         System.out.println(successMessage);
 
         String password = successMessage.split("'")[1];
-        System.out.println("Extracted password is: "+password);
+        System.out.println("Extracted password is: " + password);
 
 //GO TO LOGIN AND LOGIN SUCESSFULLY
-driver.findElement(By.xpath("//button[@class ='go-to-login-btn']")).click();
-Thread.sleep(2000);
+        driver.findElement(By.xpath("//button[@class ='go-to-login-btn']")).click();
+        Thread.sleep(2000);
         driver.findElement(By.id("inputUsername")).sendKeys("rahul");
         driver.findElement(By.name("inputPassword")).sendKeys(password);
         driver.findElement(By.className("signInBtn")).click();

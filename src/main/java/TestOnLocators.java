@@ -9,7 +9,7 @@ import static java.lang.Thread.sleep;
 
 public class TestOnLocators {
 
-    public static void main (String[] args) throws InterruptedException {
+    public static void main(String[] args) throws InterruptedException {
         WebDriverManager.chromedriver().setup();
         WebDriver driver = new ChromeDriver();
         driver.manage().window().maximize();
